@@ -144,7 +144,7 @@ data = {
     "color": get_random_color()
   },
     "airQuality": {
-    "value": '空气质量:'+ weather['airQuality'],
+    "value": weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
