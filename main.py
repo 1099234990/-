@@ -69,6 +69,16 @@ def get_birthday_left():
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
+# 生日倒计时1
+def get_birthday_left1():
+  if birthday is None:
+    print('没有设置 BIRTHDAY')
+    return 0
+  next = datetime.strptime(str(today.year) + "-" + birthday, "%Y-%m-%d")
+  if next < nowtime:
+    next = next.replace(year=next.year + 1)
+  return (next - today).days
+
 
 # 英语每日一句
 def get_daily_eng():
