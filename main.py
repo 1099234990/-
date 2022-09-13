@@ -68,6 +68,8 @@ def get_birthday_left():
   if next < nowtime:
     next = next.replace(year=next.year + 1)
   return (next - today).days
+
+# 生日倒计时1
 def get_birthday_left1():
   if birthday is None:
     print('没有设置 BIRTHDAY')
