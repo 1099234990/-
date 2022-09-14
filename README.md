@@ -14,12 +14,12 @@
 
 风向：{{ wind.DATA }}
 
-空气质量{{airQuality.DATA}}
+空气质量：{{airQuality.DATA}}
 
 我们已经相恋 {{ love_days.DATA }} 天啦
 
-距离你的生日还有：{{ birthday_left.DATA }} 天
+距离你的生日还有：{{ birthday_left.DATA }} 
 
 每日英语：{{daily_eng.DATA}}
 
-每日一言：{{ words.DATA }}
+{{ words.DATA }}
