@@ -108,7 +108,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": today.strftime('%Y年%m月%d日'),
+    "value": weather['date'],
     "color": get_random_color()
   },
   "week_day": {
