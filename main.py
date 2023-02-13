@@ -37,7 +37,7 @@ def get_weather():
   if city is None:
     print('请设置城市')
     return None
-  url = "http://wthrcdn.etouch.cn/WeatherApi?city=" + city
+  url = "https://www.tianqiapi.com/api?version=v6&appid=21375891&appsecret=fTYv7v5E&city=" + city
   # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
   res = requests.get(url, timeout=100).json()
   if res is None:
