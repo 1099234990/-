@@ -39,11 +39,6 @@ def get_weather():
     return None
   url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&ext=&cityid=&city=" + city
   # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
-  res = requests.get(url, timeout=100).json()
-  if res is None:
-    return None
-  if res['code'] != 0:
-    return None
   weather = res['data']['list'][0]
   return weather
 
