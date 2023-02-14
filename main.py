@@ -42,7 +42,7 @@ def get_weather():
   res = requests.get(url).json()
   if res is None:
     return None
-  weather = res['result']['realtime']['info']['list'][0]
+  weather = res['result']['realtime']['info']
   return weather
 
 
@@ -110,7 +110,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": weather['date'],
+    "value": weather['result']['future']['date'],
     "color": get_random_color()
   },
   "week_day": {
