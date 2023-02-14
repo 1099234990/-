@@ -42,7 +42,7 @@ def get_weather():
   res = requests.get(url).json()
   if res is None:
     return None
-  weather = res['result']['realtime']['info']
+  weather = res['result']['realtime']['info']['list'][0]
   return weather
 
 
