@@ -37,11 +37,13 @@ def get_weather():
   if city is None:
     print('请设置城市')
     return None
-  url = "https://devapi.qweather.com/v7/weather/now?location=101010100&key=67817c0b8385441cbde18ab9d6113b7e"
+  url = "http://apis.juhe.cn/simpleWeather/query?city=&key=2a2fa336071b3f88bc4f7365e91786d7" + city
   # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
   res = requests.get(url).json()
   if res is None:
     return None
+  weather = res['data']['list'][0]
+  return weather
 
 
 # 获取当前日期为星期几
