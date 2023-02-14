@@ -110,7 +110,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": weather['result']['realtime']['aqi'],
+    "value": int(weather['result']['realtime']['aqi']),
     "color": get_random_color()
   },
   "week_day": {
