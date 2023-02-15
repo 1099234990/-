@@ -36,7 +36,7 @@ if template_id is None:
 def get_weather():
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=深圳"
     res = requests.get(url).json()
-    weather = res[0]
+    weather = res
     return weather
 
 
