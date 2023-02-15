@@ -34,7 +34,10 @@ if template_id is None:
 
 # weather 直接返回对象，在使用的地方用字段进行调用。
 def get_weather():
-    url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=平南"
+  if city is None:
+      print('请设置城市')
+      return None
+    url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=" + city
     res = requests.get(url).json()
     weather = res
     return weather
