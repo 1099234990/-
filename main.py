@@ -33,17 +33,11 @@ if template_id is None:
   exit(422)
 
 # weather 直接返回对象，在使用的地方用字段进行调用。
-def get_weather():
-  if city is None:
-    print('请设置城市')
-    return None
-  url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
-  # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
-  res = requests.get(url).json()
-  if res is None:
-    return None
-  weather = res['data'][0]
-  return weather
+def get_weather(city):
+    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
+    res = requests.get(url).json()
+    weather = res['data'][0]
+    return weather
 
 
 
