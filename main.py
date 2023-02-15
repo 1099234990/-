@@ -37,12 +37,12 @@ def get_weather():
   if city is None:
     print('请设置城市')
     return None
-  url = "http://apis.juhe.cn/simpleWeather/query?key=2a2fa336071b3f88bc4f7365e91786d7&city=" + city
+  url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
   # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
   res = requests.get(url).json()
   if res is None:
     return None
-  weather = res['result']['realtime']['info']
+  weather = res['data'][0]
   return weather
 
 
@@ -110,7 +110,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": weather['result'],
+    "value": weather['date'],
     "color": get_random_color()
   },
   "week_day": {
@@ -118,7 +118,7 @@ data = {
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'],
+    "value": weather['wea'],
     "color": get_random_color()
   },
   "humidity": {
@@ -126,27 +126,27 @@ data = {
     "color": get_random_color()
   },
   "wind": {
-    "value": weather['wind'],
+    "value": weather['win'],
     "color": get_random_color()
   },
   "air_data": {
-    "value": weather['airData'],
+    "value": weather['air'],
     "color": get_random_color()
   },
   "air_quality": {
-    "value": weather['airQuality'],
+    "value": weather['air_level'],
     "color": get_random_color()
   },
   "temperature": {
-    "value": math.floor(weather['temp']),
+    "value": math.floor(weather['tem']),
     "color": get_random_color()
   },
   "highest": {
-    "value": math.floor(weather['high']),
+    "value": math.floor(weather['tem1']),
     "color": get_random_color()
   },
   "lowest": {
-    "value": math.floor(weather['low']),
+    "value": math.floor(weather['tem2']),
     "color": get_random_color()
   },
   "love_days": {
