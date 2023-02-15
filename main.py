@@ -120,7 +120,7 @@ data = {
     "color": get_random_color()
   },
   "wind": {
-    "value": f"{weather['win']} {weather['win_speed']}",
+    "value": f"{weather['win']}{weather['win_speed']}",
     "color": get_random_color()
   },
   "air_data": {
@@ -132,15 +132,15 @@ data = {
     "color": get_random_color()
   },
   "temperature": {
-    "value": weather['tem'],
+    "value": weather['tem']+'℃',
     "color": get_random_color()
   },
   "highest": {
-    "value": weather['tem1'],
+    "value": weather['tem1']+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": weather['tem2'],
+    "value": weather['tem2']+'℃',
     "color": get_random_color()
   },
   "love_days": {
