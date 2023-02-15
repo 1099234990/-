@@ -120,7 +120,7 @@ data = {
     "color": get_random_color()
   },
   "wind": {
-    "value": str(weather['win'][0]['win_speed']),
+    "value": str(weather['win']['win_speed']),
     "color": get_random_color()
   },
   "air_data": {
